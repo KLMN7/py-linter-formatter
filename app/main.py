@@ -19,6 +19,6 @@ def format_linter_report(linter_report: dict) -> list:
                          "column": error["column_number"],
                          "message": error["text"], "name": error["code"],
                          "source": "flake8"}
-                        for error in errors], "path": path, "status": "failed"
+                         for error in errors], "path": path, "status": "failed"
                         if len(errors) != 0 else "passed"} for path,
                         errors in linter_report.items()]
